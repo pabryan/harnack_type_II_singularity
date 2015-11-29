@@ -25,11 +25,6 @@
 \begin{enumerate}
 \item Hamilton's Harnack implies Type II singularities blow up to translating solitons. Can also split out all lines to obtain $\R^k \times M^{n-k}$ with $M^{n-k}$ strictly convex. Is it also compact? ref? The conjecture is that $M^{n-k}$ is rotationally symmetric. 
 \item To pick up rotational symmetry, use the non-collapsing two-point function $k(x,y)$. If we can prove a Harnack inequality for this, with equality occurring precisely on rotationally symmetric solitons, then similar arguments above for the translating solitons might prove the conjecture!
-\item For translating graphs we can calculate easily $k(x,y)$ and it constant in time, $\partial_t k = 0$. Transforming to the mean curvature flow parametrisation we then will obtain $\partial_t k + A = 0$ for some quantity $A$. See Ben Andrews change from Gauss parametrisation to mean curvature flow parametrisation. This will give us the quantity 
-\[
-\chi = t(\partial_t k + A) + \delta k
-\]
-as the basic Harnack quadratic to study. We should also be able to derive $A$ by 
 \end{enumerate}
 
 \section{Preliminaries}
@@ -37,13 +32,43 @@ as the basic Harnack quadratic to study. We should also be able to derive $A$ by
 \begin{enumerate}
 \item Describe the non-collapsing quantity.
 \item Describe notation.
+\item Describe translating graphs.
+\item For translating graphs we can calculate easily $k(x,y)$ and it constant in time, $\partial_t k = 0$. Transforming to the mean curvature flow parametrisation we then will obtain $\partial_t k + A = 0$ for some quantity $A$. See Ben Andrews change from Gauss parametrisation to mean curvature flow parametrisation. This will give us the quantity
+\[
+\chi = t(\partial_t k + A) + \delta k
+\]
+as the basic Harnack quadratic to study.
+\item The change of parametrisation is easily obtained. If our translating graph is given by $U(x,t) = (x,t + u(x))$ for $u : \R^n \to \R$, then we just define
+\[
+F(x,t) = U(f_t(x), t) = (f_t(x), t + u(f_t(x)))
+\]
+where $f_t : \R^n \to \R^n$ is a one-parameter subgroup of diffeomorhphisms satisfying
+\[
+\partial_t f_t = \frac{\grad u}{1 + |\grad u|^2}.
+\]
+\item Question: If we have a translator that is a graph over some hyperplane, is it necessarily true that it is a graph over the hyperplane orthogonal to the translation direction. I suspect yes, but haven't checked.
+\item Another way to derive $A$ could be to follow Hamilton and differentiate the soliton equation. However, this won't bring out the non-collapsing quantity so this may approach may not lead anywhere, i.e. it just recovers the Harnack inequality for the speed. Perhaps there is some way to express $k$ using the soliton equation however, and then differentiate that?
 \end{enumerate}
 
 \section{Evolution equations}
 
+\begin{enumerate}
+\item Calculate evolution of $\chi$. Here be dragons.
+\end{enumerate}
+
 \section{The Harnack Inequality}
 
+\begin{enumerate}
+\item Apply the maximum principle to obtain the Harnack inequality.
+\end{enumerate}
+
 \section{Classification of Type II singularities}
+
+\begin{enumerate}
+\item Show that equality is attained only for rotationally symmetric translators.
+\item Show that the blow up limit must satisfy equality in our Harnack for $k$.
+\item Classification. Boom!
+\end{enumerate}
 
 \bibliographystyle{amsplain}
 \bibliography{Bibliography.bib}
